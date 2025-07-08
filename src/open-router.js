@@ -6,7 +6,7 @@ const OpenRouterAgent = require('./open-router-agent.js')
  * Main module that bundles OpenRouterClient, OpenRouterService, and provides an agent factory.
  * Useful as an entry point for creating agents with shared configuration.
  */
-class OpenRouterModule {
+class OpenRouter {
   /**
    * @param {Object} options
    * @param {string} [options.apiKey=process.env.OPEN_ROUTER_API_KEY] - OpenRouter API key
@@ -34,4 +34,4 @@ class OpenRouterModule {
   }
 }
 
-module.exports = OpenRouterModule
+module.exports = OpenRouter

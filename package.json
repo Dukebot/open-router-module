@@ -2,12 +2,8 @@
   "name": "@dukebot/open-router",
   "version": "0.1.0",
   "description": "Lightweight local client for interacting with the OpenRouter API (CommonJS format)",
-  "main": "index.js",
-  "exports": {
-    "require": "./index.js",
-    "import": "./index.js"
-  },
-  "type": "commonjs",
+  "author": "Dukebot",
+  "license": "MIT",
   "keywords": [
     "openrouter",
     "ai",
@@ -18,12 +14,20 @@
     "openai",
     "agent"
   ],
-  "author": "Dukebot",
-  "license": "MIT",
+  "type": "commonjs",
+  "main": "index.js",
+  "exports": {
+    "require": "./index.js",
+    "import": "./index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dukebot/open-router-module.git"
   },
+  "files": [
+    "src",
+    "index.js"
+  ],
   "engines": {
     "node": ">=18"
   },

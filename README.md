@@ -26,9 +26,9 @@ npm install @dukebot/open-router
 ## ⚡ Quick Example
 
 ```js
-const { OpenRouterModule } = require('@dukebot/open-router')
+const { OpenRouter } = require('@dukebot/open-router')
 
-const openRouter = new OpenRouterModule({ apiKey: process.env.OPEN_ROUTER_API_KEY })
+const openRouter = new OpenRouter({ apiKey: process.env.OPEN_ROUTER_API_KEY })
 
 const response = await openRouter.service.completeChat({
   prompt: 'What is the capital of Japan?',

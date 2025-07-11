@@ -60,12 +60,12 @@ console.log(result.json) // Parsed blog post structure (if response is valid JSO
 
 ## 🧱 Modular Architecture
 
-| Component           | Description                                                      |
-|--------------------|------------------------------------------------------------------|
-| `OpenRouterClient`  | Low-level fetcher for `/chat/completions`                      |
-| `OpenRouterService` | Adds support for simplified prompts and JSON parsing           |
-| `OpenRouterAgent`   | Fixed-configuration agent using a predefined system + model    |
-| `OpenRouterModule`  | Bundles client + service and exposes agent factory             |
+| Component            | Description                                                   |
+|---------------------|---------------------------------------------------------------|
+| `OpenRouterClient`  | Low-level fetcher for `/chat/completions`                     |
+| `OpenRouterService` | Adds support for simplified prompts and JSON parsing          |
+| `OpenRouterAgent`   | Fixed-configuration agent using a predefined system + model   |
+| `OpenRouterModule`  | Bundles client + service and exposes agent factory            |
 
 ---
 
@@ -79,13 +79,38 @@ OPEN_ROUTER_API_KEY=your-api-key-here
 
 ---
 
-## 🧪 Testing Locally
+## 🧪 Examples
+
+Usage examples are located in the `/examples` folder.
+
+To run the basic example:
 
 ```bash
 node examples/simple.js
 ```
 
-> You can create your own scripts in a local `/examples` folder for testing.
+These scripts demonstrate common use cases such as:
+
+- Basic prompt + system completions
+- Agent-based completions with JSON output
+- Error handling and logging
+
+Feel free to duplicate and adapt them to your own needs.
+
+---
+
+## ✅ Tests
+
+This package includes automated tests written in [Jest](https://jestjs.io/).
+
+To run the test suite:
+
+```bash
+npm install
+npm test
+```
+
+Tests are located in the `/tests` folder and cover core functionality such as `OpenRouterClient`, `OpenRouterService`, and `OpenRouterAgent`. Mocking is used to isolate logic and ensure consistent behavior.
 
 ---
 

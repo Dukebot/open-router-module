@@ -1,6 +1,6 @@
 {
   "name": "@dukebot/open-router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightweight local client for interacting with the OpenRouter API (CommonJS format)",
   "author": "Dukebot",
   "license": "MIT",

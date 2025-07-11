@@ -1,6 +1,5 @@
-const OpenRouterService = require('../src/open-router-service')
-const OpenRouterClient = require('../src/open-router-client')
 const { jsonrepair } = require('jsonrepair')
+const { OpenRouterService, OpenRouterClient } = require('..')
 
 jest.mock('jsonrepair', () => ({
   jsonrepair: jest.fn(str => str.replace(/,}/g, '}')), // Simulación simple

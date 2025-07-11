@@ -36,12 +36,10 @@ class OpenRouterClient {
       Authorization: `Bearer ${this.apiKey}`,
       'Content-Type': 'application/json',
     }
-    if (referer) {
-      headers['HTTP-Referer'] = referer
-    }
-    if (title) {
-      headers['X-Title'] = title
-    }
+
+    if (referer) headers['HTTP-Referer'] = referer
+    if (title) headers['X-Title'] = title
+    
     return headers
   }
 
@@ -61,13 +59,9 @@ class OpenRouterClient {
    * @throws {Error} If any parameter is invalid
    */
   createPayload({ model, messages, temperature, maxTokens, topP, frequencyPenalty, presencePenalty, stop }) {
-    if (!model || typeof model !== 'string') {
-      throw new Error('model must be a string')
-    }
+    if (!model || typeof model !== 'string') throw new Error('model must be a string')
 
-    if (!Array.isArray(messages)) {
-      throw new Error('messages must be an array')
-    }
+    if (!Array.isArray(messages)) throw new Error('messages must be an array')
     for (const message of messages) {
       if (typeof message !== 'object' || !message.role || !message.content) {
         throw new Error("Each message must be an object with 'role' and 'content'")

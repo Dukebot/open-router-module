@@ -68,8 +68,6 @@ class OpenRouterService {
       stop,
     }
 
-    console.log(`${this.constructor.name}: completeChat model ${model}`)
-
     const response = await this.client.completeChat(payloadParams, headerParams)
     response.headerParams = headerParams
     response.payloadParams = payloadParams

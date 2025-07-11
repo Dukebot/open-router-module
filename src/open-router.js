@@ -11,7 +11,7 @@ class OpenRouter {
    * @param {Object} options
    * @param {string} [options.apiKey=process.env.OPEN_ROUTER_API_KEY] - OpenRouter API key
    */
-  constructor({ apiKey = process.env.OPEN_ROUTER_API_KEY }) {
+  constructor({ apiKey = process.env.OPEN_ROUTER_API_KEY } = {}) {
     this.client = new OpenRouterClient({ apiKey })
     this.service = new OpenRouterService(this.client)
   }

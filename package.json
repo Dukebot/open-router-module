@@ -1,6 +1,6 @@
 {
   "name": "@dukebot/open-router",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Lightweight local client for interacting with the OpenRouter API (CommonJS format)",
   "author": "Dukebot",
   "license": "MIT",
@@ -20,6 +20,9 @@
     "require": "./index.js",
     "import": "./index.js"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dukebot/open-router-module.git"
@@ -33,5 +36,9 @@
   },
   "dependencies": {
     "jsonrepair": "^3.12.0"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.0",
+    "jest": "^30.0.4"
   }
 }
